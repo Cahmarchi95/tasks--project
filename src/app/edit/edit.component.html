@@ -1,0 +1,15 @@
+<form [formGroup]="editTaskForm" (ngSubmit)="handleEditTask()">
+  <div class="card flex flex-column md:flex-column gap-3">
+    <input pInputText placeholder="Tarefa" formControlName="text" />
+
+    <div
+      class="flex flex-row justify-content-center align-content-center align-items-center m-1"
+    >
+      <p-button
+        [disabled]="!editTaskForm.valid"
+        type="submit"
+        label="Concluir"
+      ></p-button>
+    </div>
+  </div>
+</form>
